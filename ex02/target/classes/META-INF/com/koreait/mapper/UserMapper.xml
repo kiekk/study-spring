@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.koreait.mapper.UserMapper">
+	<select id="login" resultType="com.koreait.domain.UserVO">
+		SELECT ID, PASSWORD, NAME FROM TBL_USER WHERE ID = #{id} AND PASSWORD = #{password}
+	</select>
+	
+	<update id="keepLogin">
+		UPDATE TBL_USER SET SESSIONKEY = #{sessionKey}, SESSIONLIMIT = #{next} 
+		WHERE ID = #{id}
+	</update>
+	
+	<select id="checkuserWithSessionKey" resultType="com.koreait.domain.UserVO">
+		SELECT * FROM TBL_USER WHERE SESSIONKEY = #{value} AND SESSIONLIMIT > SYSDATE
+	</select>
+</mapper>

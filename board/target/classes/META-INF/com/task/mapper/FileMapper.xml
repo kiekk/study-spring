@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.task.mapper.FileMapper">
+	<select id="getFiles" resultType="com.task.domain.FilesVO">
+		SELECT * FROM T_FILE WHERE BNO = #{bno}
+	</select>
+	
+	<insert id="insertFile">
+		INSERT INTO T_FILE VALUES(#{bno}, #{fileName}, #{filePath})
+	</insert>
+	
+	<delete id="deleteFile">
+		DELETE FROM T_FILE WHERE BNO = #{bno}
+	</delete>
+</mapper>

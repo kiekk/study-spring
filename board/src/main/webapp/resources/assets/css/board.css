@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+div.reply_area {border-bottom:1px solid black; margin-top:5px}
+div.reply_area .reply {font-size:18px; font-weight:bold; padding-left:10px;}
+div.reply_area .replyer > textarea {resize:none; font-size:14px;}
+div.reply_area .replyDate {font-size:12px; padding-left:10px;}
+div.reply_area a.remove,
+div.reply_area a.modify,
+div.reply_area a.finish {padding-left:10px;}
+
+a {border:none !important;}

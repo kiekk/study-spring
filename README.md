@@ -1,4 +1,4 @@
-# Spring
+# study-spring
 Spring 공부 내용입니다.
 
 ## 공부 기간
